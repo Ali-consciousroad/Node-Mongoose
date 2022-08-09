@@ -24,7 +24,7 @@ connect.then((db) => {
             return Dishes.remove({});
         })
         .then(() => {
-            return mongoose.connections.close();
+            return mongoose.connection.close();
         })
         .catch((err) => {
             console.log(err);
